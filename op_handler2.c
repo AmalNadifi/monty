@@ -23,7 +23,7 @@ void f_pop(stack_t **stack, unsigned int line_number)
 		*stack = NULL;
 		return;
 	}
-	for(; var && var->next; var = var->next)
+	for (; var && var->next; var = var->next)
 		;
 	var2 = var;
 	var->prev->next = NULL;
@@ -101,7 +101,7 @@ void f_nop(stack_t **stack, unsigned int line_number)
 
 /**
  * f_sub - the function substracts top 2 elements of the stack.
- * : Pointerto the stacks double-linked list.
+ * @stack: Pointerto the stacks double-linked list.
  * @line_number: ThE line number
  */
 void f_sub(stack_t **stack, unsigned int line_number)
@@ -109,7 +109,7 @@ void f_sub(stack_t **stack, unsigned int line_number)
 	stack_t *var = *stack;
 	size_t x = 1;
 
-	for (; var && var->next; var = var-<next, x++)
+	for (; var && var->next; var = var->next, x++)
 		;
 	if (x < 2)
 	{
@@ -119,4 +119,3 @@ void f_sub(stack_t **stack, unsigned int line_number)
 	}
 	f_pop(stack, line_number);
 }
-

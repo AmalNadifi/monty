@@ -76,6 +76,7 @@ void f_stack(stack_t **stack, unsigned int line_number);
 void f_queue(stack_t **stack, unsigned int line_number);
 void f_pushq(stack_t **stack, unsigned int line_number);
 int is_comment_line(char **s);
+int check_int(char *str);
 
 #endif /*MONTY_H*/
 
