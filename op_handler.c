@@ -24,7 +24,7 @@ void f_push(stack_t **stack, unsigned int line_number)
 		free_linkedlist(stack);
 		exit(EXIT_FAILURE);
 	}
-	if ((head->cmd[1]))
+	if (check_int(head->cmd[1]))
 	{
 		dprintf(STDERR_FILENO, "L%d: usage: push integer\n", line_number);
 		free_linkedlist(stack);
