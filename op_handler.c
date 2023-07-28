@@ -49,11 +49,10 @@ void f_push(stack_t **stack, unsigned int line_number)
 	element->prev = tempNode;
 }
  /**
-  * f_pall - the function prints the stacks values from thetop.
+  * f_pall -the function prints the stacks values from thetop
   * @stack: the pointer to the stakcs double-linked list.
   * @line_number: the CurrenT line number.
   */
-
 void f_pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr = *stack; /* to traverse the stack*/
@@ -70,7 +69,7 @@ void f_pall(stack_t **stack, unsigned int line_number)
 }
 
  /**
-  * free_linkedlist - the function frees all nodes of
+  * free_linkedlist -the function frees all nodes of
   * a linked list and associated data
   * @stack: the POInter to the stack's double-linkedlist.
   */
@@ -95,6 +94,7 @@ void free_linkedlist(stack_t **stack)
 		free(cmd);
 	}
 }
+
 /**
  * f_pint - the function adds at the end of a list
  * @stack: Pointer to the stack's double-linked list.
