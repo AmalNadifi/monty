@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * add_cmd - the function adds a node_end singly-linked list of the parsed cmds
@@ -17,7 +17,7 @@ Commands *add_cmd(Commands **head, char *str, int l)
 	new = malloc(sizeof(Commands));
 	if (!new)
 		return (NULL);
-	new->cmd[0] = strdup(strtok(str, "\t"));
+	new->cmd[0] = strdup(strtok(str, " \t"));
 	if (!(new->cmd[0]))
 	{
 		free(new);
@@ -111,8 +111,8 @@ void handle_cmds(stack_t **stack)
 	}
 	if (!ops[index].opcode)
 	{
-		dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", head->line_number,
-				'\t'head->cmd[0]);
+		dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", head->line_number, \
+				head->cmd[0]);
 		free_linkedlist(stack);
 		exit(EXIT_FAILURE);
 	}

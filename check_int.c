@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 /**
  * check_int - the funCtion checks if a string can be converted to an integer
  * @str: the source String

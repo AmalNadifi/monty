@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * f_push - the function pushes agiven element to the Stack
@@ -107,7 +107,7 @@ void f_pint(stack_t **stack, unsigned int line_number)
 	if (!var)
 	{
 		dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", line_number);
-		free_linked_list(stack);
+		free_linkedlist(stack);
 		exit(EXIT_FAILURE);
 	}
 	for (; var->next; var = var->next)

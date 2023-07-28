@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * f_pop - The Function removes top element of the Stack
@@ -14,7 +14,7 @@ void f_pop(stack_t **stack, unsigned int line_number)
 	if (!var)
 	{
 		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", line_number);
-		free_linked_list(stack);
+		free_linkedlist(stack);
 		exit(EXIT_FAILURE);
 	}
 	if (!(*stack)->next)
